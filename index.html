@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PocketDerm</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">      
+    <link href="css/main.css" rel="stylesheet">
+    
+    <!-- Include fonts -->  
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/pongstagr.am.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="notification">
+      <div class="container-fluid">
+        <i class="fa fa-times fa-lg"></i>
+        <p>Your discount has been activated  - 1 Month Free</p>
+      </div>
+    </div>
+    
+    
+    <div id="header">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-sm-12">
+              <!-- Static navbar -->
+              <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                       <div id="logo">
+                        <img src="images/logo.png" />  
+                      </div>   
+                    </a>
+                  </div>
+                  <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Ingredients</a></li>
+                      <li><a href="#">Expert skincare </a></li>
+                      <li><a href="#">blog</a></li>
+                      <li><a href="#">login</a></li>
+                      <li class="active"><a href="#">get started</a></li>
+                    </ul>                   
+                  </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+              </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="slider">
+      <div class="overlay"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h1>
+              Fight acne or skin aging with a customized prescription medication shipped to your door. 
+            </h1>
+            <br/>
+            <h4>
+              No commitments, hidden fees or hassles — just great skin.
+            </h4>
+            <br/>
+            <br/>
+            <a href="#" class="button">START MY FREE MONTH</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="featured">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="images/clogo1.png" />
+            <img src="images/clogo2.png" />
+            <img src="images/clogo3.png" />
+            <img src="images/clogo4.png" />
+            <img src="images/clogo5.png" />
+            <img src="images/clogo6.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="social">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h1>
+                PocketDerm Buzz
+              </h1>  
+            </div>            
+          </div>
+          
+          <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/_KO3DyvvQOY"></iframe>
+            </div>  
+          </div>
+          <div class="col-md-4">
+            <div id="instafeed"></div>
+          </div>
+          
+          
+          <div class="col-md-12">
+            <div id="reddit">
+              <div class="title">
+                <i class="fa fa-reddit"></i>
+              </div>
+              <div class="items">                
+              </div>
+              <div class="load_more"><p><a href="javascript:void(0)" id="load_more">Load More <br/><i class="fa fa-angle-down"></i></a></p></div></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div id="footer"></div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript">
+       
+      $(document).ready(function(){
+        var after = "";
+        $("#load_more").on("click",function(){
+          if(after){            
+            var url = "http://www.reddit.com/r/pocketderm/.json?limit=3&after="+after;            
+            loadReddit(url);    
+          }          
+        });
+        loadReddit("http://www.reddit.com/r/pocketderm/.json?limit=2");
+        function loadReddit(url){
+          
+           var result = $.getJSON(url, function (data) {             
+              $.each(data.data.children, function (i, item) {
+                  console.log(item.data);            
+                  $("#reddit .items").append('<div class="item"><div class="score"><h2>'+item.data.score+'</h2></div><div class="item-title"><h3><a target="_blank" href="http://www.reddit.com'+item.data.permalink+'">'+item.data.title+'</a><span>('+item.data.domain+')</span></h3><div class="item-desc"><p> Submitted '+timeSince(item.data.created_utc)+' by <a href="http://www.reddit.com/user/'+item.data.author+'" target="_blank">'+item.data.author+'</a></p></div></div><div class="item-comments"><h3><img class="img-comment" src="images/comment.png" />'+item.data.num_comments+'</h3></div></div>');
+                  after = item.data.name;
+              });
+          });
+          result.always(function() {
+            console.log( "complete" );
+          });
+        }  
+            
+      });
+      
+      
+      
+    /**
+     * Return time since link was posted
+     * http://stackoverflow.com/a/3177838/477958
+    **/
+    function timeSince(date) {
+      var seconds = Math.floor(((new Date().getTime()/1000) - date))
+     
+      var interval = Math.floor(seconds / 31536000);
+     
+      if (interval >= 1) {
+        if(interval == 1) return interval + " year ago";
+        else
+          return interval + " years ago";
+      }
+      interval = Math.floor(seconds / 2592000);
+      if (interval >= 1) {
+        if(interval == 1) return interval + " month ago";
+        else
+          return interval + " months ago";
+      }
+      interval = Math.floor(seconds / 86400);
+      if (interval >= 1) {
+        if(interval == 1) return interval + " day ago";
+        else
+          return interval + " days ago";
+      }
+      interval = Math.floor(seconds / 3600);
+      if (interval >= 1) {
+        if(interval == 1) return interval + " hour ago";
+        else
+          return interval + " hours ago";
+      }
+      interval = Math.floor(seconds / 60);
+      if (interval >= 1) {
+        if(interval == 1) return interval + " minute ago";
+        else
+          return interval + " minutes ago";
+      }
+      return Math.floor(seconds) + " seconds ago";
+    }
+    </script>
+    <script type="text/javascript">
+      /*var feed = new Instafeed({
+          get: 'user',
+          clientId: '43227be3950044ad86d5555f16e0b318',
+          accessToken: '1600071765.1677ed0.0639429e406d4222b238fb4576782f9c',
+          userId: 1600071765,
+          resolution: 'thumbnail'
+      });
+      feed.run();*/
+    </script>
+        
+  </body>
+</html>
