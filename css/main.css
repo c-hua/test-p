@@ -1,118 +1,87 @@
 .font_family, body, h1, h4, #notification p, .navbar-default .navbar-nav > li > a, #slider {
-  font-family: 'Source Sans Pro', sans-serif;
-}
+  font-family: 'Source Sans Pro', sans-serif; }
 
 .font_weight_regular {
-  font-weight: 400;
-}
+  font-weight: 400; }
 
 .font_weight_semi_bold, h1, h4, #notification p, .navbar-default .navbar-nav > li > a, #slider, #reddit .load_more p #load_more {
-  font-weight: 600;
-}
+  font-weight: 600; }
 
 #notification {
   background-color: #93e67e;
-  color: white;
+  color: #fff;
   text-align: center;
-  padding: 15px 0px;
-}
-#notification .container-fluid {
-  display: table;
-  height: 100%;
-}
-#notification p {
-  font-size: 18px;
-  display: table-cell;
-  vertical-align: middle;
-}
-@media (max-width: 767px) {
+  padding: 15px 0px; }
+  #notification .container-fluid {
+    display: table;
+    height: 100%; }
   #notification p {
-    padding-right: 20px;
-  }
-}
-#notification i.fa-times {
-  position: absolute;
-  right: 40px;
-  margin-top: 5px;
-}
-@media (max-width: 767px) {
+    font-size: 18px;
+    display: table-cell;
+    vertical-align: middle; }
+    @media (max-width: 767px) {
+      #notification p {
+        padding-right: 20px; } }
   #notification i.fa-times {
-    right: 20px;
-  }
-}
-#notification i.fa-times:hover {
-  cursor: pointer;
-}
+    position: absolute;
+    right: 40px;
+    margin-top: 5px; }
+    @media (max-width: 767px) {
+      #notification i.fa-times {
+        right: 20px; } }
+  #notification i.fa-times:hover {
+    cursor: pointer; }
 
 #header {
-  margin: 30px 0px;
-}
+  margin: 30px 0px; }
 
 #logo {
-  text-align: center;
-}
+  text-align: center; }
 
 #logo img {
   width: 200px;
-  display: inline-block;
-}
+  display: inline-block; }
 
 .navbar-default {
   background-color: transparent;
-  border-color: transparent;
-}
+  border-color: transparent; }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar-toggle {
-    margin: 0 !important;
-  }
-}
+    margin: 0 !important; } }
 @media (max-width: 767px) {
   .navbar-toggle {
-    margin: 0 !important;
-  }
-}
+    margin: 0 !important; } }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .navbar-brand {
-    padding: 0 !important;
-  }
-}
+    padding: 0 !important; } }
 @media (max-width: 767px) {
   .navbar-brand {
-    padding: 0 !important;
-  }
-}
+    padding: 0 !important; } }
 
 .navbar-default .navbar-nav > li > a {
   background-color: transparent;
   font-size: 14px;
   text-transform: uppercase;
-  color: #6b6b6b;
-}
+  color: #6b6b6b; }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
   color: #23b6d5;
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
   color: #23b6d5;
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
-  color: #23b6d5;
-}
-@media (max-width: 767px) {
-  .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
-    color: #23b6d5 !important;
-  }
-}
+  color: #23b6d5; }
+  @media (max-width: 767px) {
+    .dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover {
+      color: #23b6d5 !important; } }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background: #23b6d5;
-}
+  background: #23b6d5; }
 
 #slider {
   min-height: 400px;
@@ -121,120 +90,98 @@
   background-position: left top;
   background-repeat: no-repeat;
   text-align: center;
-  padding: 50px;
-}
+  padding: 50px; }
 
 #slider .button {
   display: inline-block;
   background: #23b6d5;
-  color: white;
+  color: #fff;
   padding: 15px 25px;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 #featured {
   background: #f8f8f8;
-  text-align: center;
-}
+  text-align: center; }
 
 #featured img {
   height: 30px;
-  margin: 40px 30px;
-}
+  margin: 40px 30px; }
 
 #social .heading {
   text-align: center;
-  margin: 50px 0px;
-}
+  margin: 50px 0px; }
 
 #reddit {
   display: table;
-  width: 100%;
-}
+  width: 100%; }
 
 #reddit .item {
   display: table-row;
   background: #f8f8f8;
-  border-bottom: 1px solid #e1e1e1;
-}
+  border-bottom: 1px solid #e1e1e1; }
 
 #reddit .score {
   display: table-cell;
   padding: 20px;
   vertical-align: middle;
   width: 10%;
-  text-align: center;
-}
+  text-align: center; }
 
 #reddit .item-title {
   display: table-cell;
-  width: 80%;
-}
-#reddit .item-title a {
-  color: #42413e;
-  text-decoration: none;
-}
+  width: 80%; }
+  #reddit .item-title a {
+    color: #42413e;
+    text-decoration: none; }
 
 #reddit .item-title span {
   font-size: 14px;
   padding-left: 10px;
-  color: #8f8f8f;
-}
+  color: #8f8f8f; }
 
 #reddit .title {
   height: 60px;
   background: #ff4500;
-  color: white;
-  margin-top: 50px;
-}
+  color: #fff;
+  margin-top: 50px; }
 
 #reddit .fa-reddit {
   font-size: 40px;
   line-height: 60px;
-  margin-left: 30px;
-}
+  margin-left: 30px; }
 
 #reddit .item-desc p {
-  color: #8f8f8f;
-}
+  color: #8f8f8f; }
 
 #reddit .item-desc a {
-  color: #23b6d5;
-}
+  color: #23b6d5; }
 
 #reddit .item-title, #reddit .score, #reddit .item-comments {
-  border-bottom: 1px solid #e1e1e1;
-}
+  border-bottom: 1px solid #e1e1e1; }
 
 #reddit .item-comments {
   display: table-cell;
   vertical-align: middle;
   width: 10%;
-  text-align: center;
-}
-#reddit .item-comments .img-comment {
-  height: 16px;
-  padding: 0px 10px;
-}
+  text-align: center; }
+  #reddit .item-comments .img-comment {
+    height: 16px;
+    padding: 0px 10px; }
 
 #reddit .load_more {
   height: 80px;
   background: #f8f8f8;
   text-align: center;
   display: table;
-  width: 100%;
-}
-#reddit .load_more p {
-  display: table-cell;
-  vertical-align: middle;
-}
-#reddit .load_more p #load_more {
-  color: #23b6d5;
-  text-decoration: none;
-}
+  width: 100%; }
+  #reddit .load_more p {
+    display: table-cell;
+    vertical-align: middle; }
+    #reddit .load_more p #load_more {
+      color: #23b6d5;
+      text-decoration: none; }
 
 #footer {
   height: 60px;
   background: #008d9f;
-  margin-top: 50px;
-}
+  margin-top: 50px; }
