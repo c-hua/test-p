@@ -1,0 +1,16 @@
+.font_family{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.font_weight_regular{
+	font-weight: 400;
+}
+.font_weight_semi_bold{
+	font-weight: 600;
+}
+body{
+	@extend .font_family;
+}
+h1,h4{
+	@extend .font_family;
+	@extend .font_weight_semi_bold;
+}
