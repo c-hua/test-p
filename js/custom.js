@@ -5,11 +5,11 @@ $(document).ready(function(){
 	var after = "";
     $("#load_more").on("click",function(){
       if(after){            
-        var url = "http://www.reddit.com/r/india/.json?limit=3&after="+after;            
+        var url = "http://www.reddit.com/r/pocketderm/.json?limit=3&after="+after;            
         loadReddit(url);    
       }          
     });
-    loadReddit("http://www.reddit.com/r/india/.json?limit=2");
+    loadReddit("http://www.reddit.com/r/pocketderm/.json?limit=2");
     function loadReddit(url){
       
        var result = $.getJSON(url, function (data) {             
