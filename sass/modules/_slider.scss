@@ -1,0 +1,18 @@
+#slider{
+	min-height: 400px;
+	background-image:url('../images/slider_resized.jpg');
+	background-size: cover;
+	background-position: left top;
+	background-repeat: no-repeat;
+	text-align: center;
+	padding: 50px;
+	@extend .font_family;
+	@extend .font_weight_semi_bold;
+}
+#slider .button{
+	display: inline-block;
+	background: $blueColor;
+	color: $whiteColor;
+	padding: 15px 25px;
+	text-decoration: none;
+}
