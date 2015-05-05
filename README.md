@@ -1,3 +1,3 @@
-# tester
+SASS sample.
 
 
