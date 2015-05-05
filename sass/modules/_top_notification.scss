@@ -1,0 +1,31 @@
+#notification{
+	background-color: $greenColor;
+	color: $whiteColor;	
+	text-align: center;
+	padding:15px 0px;
+	.container-fluid{
+		display: table;
+	  	height: 100%;	
+	}
+	p{
+		@extend .font_family;
+		@extend .font_weight_semi_bold;
+		font-size: 18px;
+		display: table-cell;
+		vertical-align: middle;	
+		@include phone{
+			padding-right: 20px;
+		}	
+	}
+	i.fa-times{
+		position: absolute;
+		right: 40px;
+		margin-top: 5px;
+		@include phone{
+			right: 20px;
+		}
+	}
+	i.fa-times:hover{
+		cursor: pointer;
+	}
+}
