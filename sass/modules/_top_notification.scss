@@ -24,8 +24,6 @@
 		@include phone{
 			right: 20px;
 		}
-	}
-	i.fa-times:hover{
+	&:hover {
 		cursor: pointer;
 	}
-}
